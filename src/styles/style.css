@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  background-color: cornsilk;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 4;
+  margin-block: 5em;
+}
+
+.App .select label {
+  display: block;
+  padding-block: 1em;
+  color: #050505;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  color: #dd6767;
+}
+
+.App .select #list {
+  cursor: pointer;
+  width: 15rem;
+  font-size: 1em;
+  color: #dd6767;
+  padding: 0.5em;
+}
+
+.App .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+@media screen and (min-width: 760px) {
+  .App .info {
+    width: 30%;
+  }
+}
+
+.App .info .description,
+.App .info .temperament,
+.App .info .additional {
+  margin-block: 3em;
+  background-color: #f0e9e6;
+  border: 5px solid #f0e9e6;
+  padding: 0.5em;
+}
+
+.App .info h4 {
+  padding: 1em;
+  color: #dd6767;
+}
+
+.App .info p {
+  text-align: justify;
+}
+
+.App .info img {
+  height: 15em;
+}
+
+.App .info table,
+.App .info td,
+.App .info th {
+  width: 15em;
+  height: 3em;
+  margin: 0 auto;
+  border: 1px solid #dd6767;
+}
+
+.App .info table th,
+.App .info td th,
+.App .info th th {
+  text-transform: capitalize;
+}
+
+.App .info table td,
+.App .info td td,
+.App .info th td {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
