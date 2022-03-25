@@ -45,21 +45,6 @@ $bg-clr: rgb(240, 233, 230);
     @media screen and(min-width: 760px) {
       width: 30%;
     }
-    .description,
-    .temperament,
-    .additional {
-      margin-block: 3em;
-      background-color: $bg-clr;
-      border: 5px solid $bg-clr;
-      padding: 0.5em;
-    }
-    h4 {
-      padding: 1em;
-      color: $clr-primary;
-    }
-    p {
-      text-align: justify;
-    }
     img {
       height: 15em;
     }
@@ -76,6 +61,22 @@ $bg-clr: rgb(240, 233, 230);
       td {
         text-align: center;
       }
+    }
+  }
+  .description,
+  .temperament,
+  .additional {
+    margin-block: 3em;
+    background-color: $bg-clr;
+    border: 5px solid $bg-clr;
+    padding: 0.5em;
+    h4 {
+      //   padding-block: 1em;
+      color: $clr-primary;
+    }
+    p {
+      padding-block: 2em;
+      text-align: justify;
     }
   }
 }

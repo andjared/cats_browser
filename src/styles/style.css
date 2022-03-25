@@ -84,24 +84,6 @@
   }
 }
 
-.App .info .description,
-.App .info .temperament,
-.App .info .additional {
-  margin-block: 3em;
-  background-color: #f0e9e6;
-  border: 5px solid #f0e9e6;
-  padding: 0.5em;
-}
-
-.App .info h4 {
-  padding: 1em;
-  color: #dd6767;
-}
-
-.App .info p {
-  text-align: justify;
-}
-
 .App .info img {
   height: 15em;
 }
@@ -125,5 +107,27 @@
 .App .info td td,
 .App .info th td {
   text-align: center;
+}
+
+.App .description,
+.App .temperament,
+.App .additional {
+  margin-block: 3em;
+  background-color: #f0e9e6;
+  border: 5px solid #f0e9e6;
+  padding: 0.5em;
+}
+
+.App .description h4,
+.App .temperament h4,
+.App .additional h4 {
+  color: #dd6767;
+}
+
+.App .description p,
+.App .temperament p,
+.App .additional p {
+  padding-block: 2em;
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */
