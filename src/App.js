@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CatsInfo from "./components/CatsInfo";
 import Select from "./components/Select";
+import "./styles/style.css";
 function App() {
   const [listOfBreeds, setListOfBreeds] = useState(null);
   const [catsInfo, setCatsInfo] = useState(null);
