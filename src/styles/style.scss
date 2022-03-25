@@ -1,7 +1,9 @@
 //variables
 $clr-primary: rgb(221, 103, 103);
 $bg-clr: rgb(240, 233, 230);
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,32 +15,14 @@ $bg-clr: rgb(240, 233, 230);
   justify-content: space-between;
   align-items: center;
 }
-.App {
+html {
+  height: 100%;
+}
+.container {
+  min-height: 100vh;
   background-color: cornsilk;
   margin: 0 auto;
-  box-sizing: border-box;
   @include flexCenter(column);
-  .select {
-    @include flexCenter(column);
-    z-index: 4;
-    margin-block: 5em;
-    label {
-      display: block;
-      padding-block: 1em;
-      color: rgb(5, 5, 5);
-      font-weight: bold;
-      font-size: 2em;
-      text-align: center;
-      color: $clr-primary;
-    }
-    #list {
-      cursor: pointer;
-      width: 15rem;
-      font-size: 1em;
-      color: $clr-primary;
-      padding: 0.5em;
-    }
-  }
   .info {
     @include flexCenter(column);
     width: 80%;
@@ -46,7 +30,8 @@ $bg-clr: rgb(240, 233, 230);
       width: 30%;
     }
     img {
-      height: 15em;
+      max-height: 15em;
+      max-width: 80%;
     }
     table,
     td,
@@ -71,12 +56,15 @@ $bg-clr: rgb(240, 233, 230);
     border: 5px solid $bg-clr;
     padding: 0.5em;
     h4 {
-      //   padding-block: 1em;
       color: $clr-primary;
     }
     p {
       padding-block: 2em;
       text-align: justify;
     }
+  }
+  .additional p {
+    padding-top: 0;
+    font-style: italic;
   }
 }

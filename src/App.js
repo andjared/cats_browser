@@ -50,10 +50,10 @@ function App() {
     return data;
   };
   return (
-    <div className="App">
+    <main className="container">
       <Select list={listOfBreeds} handleClick={searchByName} />
       <CatsInfo info={catsInfo} imgUrl={imgUrl} />
-    </div>
+    </main>
   );
 }
 

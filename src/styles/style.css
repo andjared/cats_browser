@@ -1,15 +1,20 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.App {
+html {
+  height: 100%;
+}
+
+.container {
+  min-height: 100vh;
   background-color: cornsilk;
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,43 +30,7 @@
           align-items: center;
 }
 
-.App .select {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 4;
-  margin-block: 5em;
-}
-
-.App .select label {
-  display: block;
-  padding-block: 1em;
-  color: #050505;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
-  color: #dd6767;
-}
-
-.App .select #list {
-  cursor: pointer;
-  width: 15rem;
-  font-size: 1em;
-  color: #dd6767;
-  padding: 0.5em;
-}
-
-.App .info {
+.container .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,55 +48,61 @@
 }
 
 @media screen and (min-width: 760px) {
-  .App .info {
+  .container .info {
     width: 30%;
   }
 }
 
-.App .info img {
-  height: 15em;
+.container .info img {
+  max-height: 15em;
+  max-width: 80%;
 }
 
-.App .info table,
-.App .info td,
-.App .info th {
+.container .info table,
+.container .info td,
+.container .info th {
   width: 15em;
   height: 3em;
   margin: 0 auto;
   border: 1px solid #dd6767;
 }
 
-.App .info table th,
-.App .info td th,
-.App .info th th {
+.container .info table th,
+.container .info td th,
+.container .info th th {
   text-transform: capitalize;
 }
 
-.App .info table td,
-.App .info td td,
-.App .info th td {
+.container .info table td,
+.container .info td td,
+.container .info th td {
   text-align: center;
 }
 
-.App .description,
-.App .temperament,
-.App .additional {
+.container .description,
+.container .temperament,
+.container .additional {
   margin-block: 3em;
   background-color: #f0e9e6;
   border: 5px solid #f0e9e6;
   padding: 0.5em;
 }
 
-.App .description h4,
-.App .temperament h4,
-.App .additional h4 {
+.container .description h4,
+.container .temperament h4,
+.container .additional h4 {
   color: #dd6767;
 }
 
-.App .description p,
-.App .temperament p,
-.App .additional p {
+.container .description p,
+.container .temperament p,
+.container .additional p {
   padding-block: 2em;
   text-align: justify;
+}
+
+.container .additional p {
+  padding-top: 0;
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */
