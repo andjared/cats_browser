@@ -7,10 +7,6 @@
           box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 .container {
   min-height: 100vh;
   background-color: cornsilk;
@@ -30,6 +26,67 @@ html {
           align-items: center;
 }
 
+.container .select {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.container .select label {
+  margin-top: 2em;
+  font-size: 2em;
+  color: #dd6767;
+  font-weight: bold;
+}
+
+.container .select .custom-select {
+  position: relative;
+  margin-top: 2em;
+  width: 100%;
+}
+
+.container .select .custom-select select {
+  width: 100%;
+  font-size: 1em;
+  padding: 0.5em 3em 0.5em 1em;
+  background: #f0e9e6;
+  color: #dd6767;
+  border: 0;
+  outline: none;
+}
+
+@media screen and (min-width: 760px) {
+  .container .select .custom-select select {
+    font-size: 1.5em;
+  }
+}
+
+.container .select .custom-select .custom-arrow {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #dd6767;
+  height: 100%;
+  width: 3em;
+  pointer-events: none;
+}
+
+.container .select .custom-select .custom-arrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid #f0e9e6;
+  top: 50%;
+}
+
 .container .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,12 +101,13 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 4em;
   width: 80%;
 }
 
 @media screen and (min-width: 760px) {
   .container .info {
-    width: 30%;
+    width: 50%;
   }
 }
 
@@ -101,7 +159,9 @@ html {
   text-align: justify;
 }
 
-.container .additional p {
+.container .description .additional p,
+.container .temperament .additional p,
+.container .additional .additional p {
   padding-top: 0;
   font-style: italic;
 }

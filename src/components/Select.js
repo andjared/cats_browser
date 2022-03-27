@@ -2,7 +2,7 @@ const Select = ({ list, handleClick }) => {
   return (
     <div className="select">
       <label htmlFor="list">Search by cats breed: </label>
-      <div className="select-list">
+      <div className="custom-select">
         <select
           name="cats_list"
           id="list"
@@ -19,6 +19,7 @@ const Select = ({ list, handleClick }) => {
               );
             })}
         </select>
+        <span className="custom-arrow"></span>
       </div>
     </div>
   );

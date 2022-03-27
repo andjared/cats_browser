@@ -15,19 +15,71 @@ $bg-clr: rgb(240, 233, 230);
   justify-content: space-between;
   align-items: center;
 }
-html {
-  height: 100%;
-}
+
 .container {
   min-height: 100vh;
   background-color: cornsilk;
   margin: 0 auto;
   @include flexCenter(column);
+  .select {
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    label {
+      margin-top: 2em;
+      font-size: 2em;
+      color: $clr-primary;
+      font-weight: bold;
+    }
+    .custom-select {
+      position: relative;
+      margin-top: 2em;
+      width: 100%;
+      select {
+        width: 100%;
+        font-size: 1em;
+        padding: 0.5em 3em 0.5em 1em;
+        background: $bg-clr;
+        color: $clr-primary;
+        border: 0;
+        outline: none;
+        @media screen and(min-width: 760px) {
+          font-size: 1.5em;
+        }
+      }
+      .custom-arrow {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $clr-primary;
+        height: 100%;
+        width: 3em;
+        pointer-events: none;
+      }
+
+      .custom-arrow::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-left: 1em solid transparent;
+        border-right: 1em solid transparent;
+        border-top: 1em solid $bg-clr;
+        top: 50%;
+      }
+    }
+  }
+
   .info {
     @include flexCenter(column);
+    margin: 4em;
+
     width: 80%;
     @media screen and(min-width: 760px) {
-      width: 30%;
+      width: 50%;
     }
     img {
       max-height: 15em;
@@ -62,9 +114,9 @@ html {
       padding-block: 2em;
       text-align: justify;
     }
-  }
-  .additional p {
-    padding-top: 0;
-    font-style: italic;
+    .additional p {
+      padding-top: 0;
+      font-style: italic;
+    }
   }
 }
