@@ -56,12 +56,6 @@
   outline: none;
 }
 
-@media screen and (min-width: 760px) {
-  .container .select .custom-select select {
-    font-size: 1.5em;
-  }
-}
-
 .container .select .custom-select .custom-arrow {
   display: block;
   position: absolute;
@@ -69,8 +63,9 @@
   right: 0;
   background: #dd6767;
   height: 100%;
-  width: 3em;
+  width: 2.5em;
   pointer-events: none;
+  cursor: pointer;
 }
 
 .container .select .custom-select .custom-arrow::after {
@@ -87,7 +82,7 @@
   top: 50%;
 }
 
-.container .info {
+.container .info-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,67 +97,75 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 4em;
-  width: 80%;
+  width: 70%;
 }
 
-@media screen and (min-width: 760px) {
-  .container .info {
-    width: 50%;
-  }
-}
-
-.container .info img {
+.container .info-container img {
   max-height: 15em;
   max-width: 80%;
 }
 
-.container .info table,
-.container .info td,
-.container .info th {
+.container .info-container table,
+.container .info-container td,
+.container .info-container th {
   width: 15em;
   height: 3em;
   margin: 0 auto;
   border: 1px solid #dd6767;
 }
 
-.container .info table th,
-.container .info td th,
-.container .info th th {
+.container .info-container table th,
+.container .info-container td th,
+.container .info-container th th {
   text-transform: capitalize;
 }
 
-.container .info table td,
-.container .info td td,
-.container .info th td {
+.container .info-container table td,
+.container .info-container td td,
+.container .info-container th td {
   text-align: center;
 }
 
-.container .description,
-.container .temperament,
-.container .additional {
+.container .info .info-box {
   margin-block: 3em;
   background-color: #f0e9e6;
   border: 5px solid #f0e9e6;
   padding: 0.5em;
 }
 
-.container .description h4,
-.container .temperament h4,
-.container .additional h4 {
+.container .info .info-box h4 {
   color: #dd6767;
 }
 
-.container .description p,
-.container .temperament p,
-.container .additional p {
+.container .info .info-box p {
   padding-block: 2em;
   text-align: justify;
 }
 
-.container .description .additional p,
-.container .temperament .additional p,
-.container .additional .additional p {
-  padding-top: 0;
+.container .info .additional p {
+  padding-top: 0.5em;
   font-style: italic;
+}
+
+@media screen and (min-width: 960px) {
+  .container .info-container .info {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [first] 55% [second] 45%;
+        grid-template-columns: [first] 55% [second] 45%;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+  }
+  .container .info-container .info .info-box {
+    margin-inline: 2em;
+  }
+  .container .info-container .info table,
+  .container .info-container .info th,
+  .container .info-container .info td,
+  .container .info-container .info tr {
+    height: 2.5em;
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

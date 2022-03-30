@@ -1,18 +1,20 @@
 const CatsInfo = ({ info, imgUrl }) => {
   return (
-    <div className="info">
+    <div className="info-container">
       {imgUrl && <img src={imgUrl} alt="catImg"></img>}
-      {info && (
-        <div>
-          <div className="description">
-            <h4>Description:</h4>
-            <p>{info.description}</p>
+      {info && imgUrl && (
+        <div className="info">
+          <div>
+            <div className="description info-box">
+              <h4>Description:</h4>
+              <p>{info.description}</p>
+            </div>
+            <div className="temperament info-box">
+              <h4>Temperament: </h4>
+              <p>{info.temperament}</p>
+            </div>
           </div>
-          <div className="temperament">
-            <h4>Temperament: </h4>
-            <p>{info.temperament}</p>
-          </div>
-          <div className="additional">
+          <div className="additional info-box">
             <h4>Additional info: </h4>
             <p>
               <small>
