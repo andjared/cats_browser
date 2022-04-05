@@ -15,6 +15,16 @@ $bg-clr: rgb(240, 233, 230);
   justify-content: space-between;
   align-items: center;
 }
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateY(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
 
 .container {
   min-height: 100vh;
@@ -30,6 +40,7 @@ $bg-clr: rgb(240, 233, 230);
       font-size: 2em;
       color: $clr-primary;
       font-weight: bold;
+      text-align: center;
     }
     .custom-select {
       position: relative;
@@ -73,19 +84,29 @@ $bg-clr: rgb(240, 233, 230);
 
   .info-container {
     @include flexCenter(column);
+    animation: transitionIn 2s;
+
     margin: 4em;
     width: 70%;
     img {
       max-height: 15em;
       max-width: 80%;
     }
+
     table,
     td,
     th {
       width: 15em;
       height: 3em;
       margin: 0 auto;
-      border: 1px solid $clr-primary;
+      box-sizing: border-box;
+      th,
+      td {
+        border: 1px solid $bg-clr;
+        background-color: $clr-primary;
+        opacity: 0.8;
+        border-collapse: collapse;
+      }
       th {
         text-transform: capitalize;
       }
@@ -128,7 +149,7 @@ $bg-clr: rgb(240, 233, 230);
         th,
         td,
         tr {
-          height: 2.5em;
+          height: 2em;
           width: 70%;
         }
       }

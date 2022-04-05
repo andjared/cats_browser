@@ -36,9 +36,11 @@ function App() {
     );
     const data = await response.json();
     if (breedsName) {
-      setCatsInfo(data[0]);
       const imageData = getCatsImg(data[0].reference_image_id);
       imageData.then((data) => setImgUrl(data.url));
+      setTimeout(() => {
+        setCatsInfo(data[0]);
+      }, 200);
     }
   };
   const getCatsImg = async (breedsId) => {

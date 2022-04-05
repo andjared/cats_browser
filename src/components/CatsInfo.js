@@ -1,6 +1,6 @@
 const CatsInfo = ({ info, imgUrl }) => {
   return (
-    <div className="info-container">
+    <div className="info-container" key={Math.random()}>
       {imgUrl && <img src={imgUrl} alt="catImg"></img>}
       {info && imgUrl && (
         <div className="info">
@@ -22,34 +22,36 @@ const CatsInfo = ({ info, imgUrl }) => {
                 scale from 1 to 5.
               </small>
             </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>intelligence </th>
-                  <td>{info.intelligence}</td>
-                </tr>
-                <tr>
-                  <th>adaptability</th>
-                  <td>{info.adaptability}</td>
-                </tr>
-                <tr>
-                  <th>energy level</th>
-                  <td>{info.energy_level}</td>
-                </tr>
-                <tr>
-                  <th>child friendly</th>
-                  <td>{info.child_friendly}</td>
-                </tr>
-                <tr>
-                  <th>dog friendly</th>
-                  <td>{info.dog_friendly}</td>
-                </tr>
-                <tr>
-                  <th>affection level</th>
-                  <td>{info.affection_level}</td>
-                </tr>
-              </thead>
-            </table>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>intelligence </th>
+                    <td>{info.intelligence}</td>
+                  </tr>
+                  <tr>
+                    <th>adaptability</th>
+                    <td>{info.adaptability}</td>
+                  </tr>
+                  <tr>
+                    <th>energy level</th>
+                    <td>{info.energy_level}</td>
+                  </tr>
+                  <tr>
+                    <th>child friendly</th>
+                    <td>{info.child_friendly}</td>
+                  </tr>
+                  <tr>
+                    <th>dog friendly</th>
+                    <td>{info.dog_friendly}</td>
+                  </tr>
+                  <tr>
+                    <th>affection level</th>
+                    <td>{info.affection_level}</td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
           </div>
         </div>
       )}
