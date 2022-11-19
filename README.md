@@ -1,3 +1,19 @@
+<div id="header">
+<h2>Cats Browser </h2>
+<p>Project is built with React.</p> 
+<p>It has select option wich allows user to pick one cat breed and then it renders image and different informations about chosen breed. </p>
+<p>Data are fetched from this API https://thecatapi.com/ </p>
+</div>
+
+---
+
+![cats_browser](screenshot.jpg)
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
