@@ -3,6 +3,7 @@
 <p>Project is built with React.</p> 
 <p>It has select option wich allows user to pick one cat breed and then it renders image and different informations about chosen breed. </p>
 <p>Data are fetched from this API https://thecatapi.com/ </p>
+<p>Published on Github Pages: https://andjared.github.io/cats_browser/ </p>
 </div>
 
 ---
