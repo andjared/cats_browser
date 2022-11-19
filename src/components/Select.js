@@ -9,12 +9,12 @@ const Select = ({ list, handleClick }) => {
           onClick={(e) => handleClick(e.target.value)}
         >
           <option></option>
-
           {list &&
             list.map((breed) => {
+              const { name, id } = breed;
               return (
-                <option value={breed.name} key={breed.id}>
-                  {breed.name}
+                <option value={name} key={id}>
+                  {name}
                 </option>
               );
             })}

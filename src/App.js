@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CatsInfo from "./components/CatsInfo";
 import Select from "./components/Select";
 import "./styles/style.css";
+
 function App() {
   const [listOfBreeds, setListOfBreeds] = useState(null);
   const [catsInfo, setCatsInfo] = useState(null);
@@ -21,12 +22,13 @@ function App() {
         "https://api.thecatapi.com/v1/breeds",
         myInit
       );
+
       const data = await response.json();
+
       return data;
     };
-    breedsList().then((data) => {
-      setListOfBreeds(data);
-    });
+
+    breedsList().then((data) => setListOfBreeds(data));
   }, []);
 
   const searchByName = async (breedsName) => {
@@ -34,27 +36,31 @@ function App() {
       `https://api.thecatapi.com/v1/breeds/search?q=${breedsName}`,
       myInit
     );
+
     const data = await response.json();
+
     if (breedsName) {
       const imageData = getCatsImg(data[0].reference_image_id);
       imageData.then((data) => setImgUrl(data.url));
-      setTimeout(() => {
-        setCatsInfo(data[0]);
-      }, 200);
+      setCatsInfo(data[0]);
     }
   };
+
   const getCatsImg = async (breedsId) => {
     const response = await fetch(
       `https://api.thecatapi.com/v1/images/${breedsId}`,
       myInit
     );
+
     const data = await response.json();
+
     return data;
   };
+
   return (
     <main className="container">
       <Select list={listOfBreeds} handleClick={searchByName} />
-      <CatsInfo info={catsInfo} imgUrl={imgUrl} />
+      {catsInfo && imgUrl && <CatsInfo info={catsInfo} imgUrl={imgUrl} />}
     </main>
   );
 }

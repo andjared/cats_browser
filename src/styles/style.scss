@@ -15,11 +15,13 @@ $bg-clr: rgb(240, 233, 230);
   justify-content: space-between;
   align-items: center;
 }
+
 @keyframes transitionIn {
   from {
     opacity: 0;
     transform: rotateY(-20deg);
   }
+
   to {
     opacity: 1;
     transform: rotateX(0);
@@ -31,10 +33,12 @@ $bg-clr: rgb(240, 233, 230);
   background-color: cornsilk;
   margin: 0 auto;
   @include flexCenter(column);
+
   .select {
     display: grid;
     place-items: center;
     margin: 0 auto;
+
     label {
       margin-top: 2em;
       font-size: 2em;
@@ -42,11 +46,13 @@ $bg-clr: rgb(240, 233, 230);
       font-weight: bold;
       text-align: center;
     }
+
     .custom-select {
       position: relative;
       margin-top: 2em;
       min-width: 80%;
       max-width: 100%;
+
       select {
         width: 100%;
         font-size: 1em;
@@ -57,6 +63,7 @@ $bg-clr: rgb(240, 233, 230);
         outline: none;
         cursor: pointer;
       }
+
       .custom-arrow {
         display: block;
         position: absolute;
@@ -87,9 +94,9 @@ $bg-clr: rgb(240, 233, 230);
   .info-container {
     @include flexCenter(column);
     animation: transitionIn 2s;
-
     margin: 4em;
     width: 70%;
+
     img {
       max-height: 15em;
       max-width: 80%;
@@ -102,6 +109,7 @@ $bg-clr: rgb(240, 233, 230);
       height: 3em;
       margin: 0 auto;
       box-sizing: border-box;
+
       th,
       td {
         border: 1px solid $bg-clr;
@@ -109,23 +117,28 @@ $bg-clr: rgb(240, 233, 230);
         opacity: 0.8;
         border-collapse: collapse;
       }
+
       th {
         text-transform: capitalize;
       }
+
       td {
         text-align: center;
       }
     }
   }
+
   .info {
     .info-box {
       margin-block: 3em;
       background-color: $bg-clr;
       border: 5px solid $bg-clr;
       padding: 0.5em;
+
       h4 {
         color: $clr-primary;
       }
+
       p {
         padding-block: 2em;
         text-align: justify;
@@ -136,6 +149,7 @@ $bg-clr: rgb(240, 233, 230);
       font-style: italic;
     }
   }
+
   @media screen and(min-width: 960px) {
     .info-container {
       .info {
@@ -147,6 +161,7 @@ $bg-clr: rgb(240, 233, 230);
         .info-box {
           margin-inline: 2em;
         }
+
         table,
         th,
         td,
